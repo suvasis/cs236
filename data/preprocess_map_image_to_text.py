@@ -1,17 +1,29 @@
 def cleanfile():
-    lines_to_remove = set()
-    with open("tt1", "r") as f:
+    images_set = set()
+    #cc12m_clean_list_10m.tsv  images  images1  images10m
+    with open("images10m", "r") as f:
          for line in f.readlines():
-             #print("line to be removed ", line)
-             lines_to_remove.add(line.strip())
+             #print("line to be removed ", line.strip())
+             image = line.strip().split("\t")[0]
+             #print("image : ",image)
+             images_set.add(image)
     all_lines = None
-    with open("cc12m_clean_list.tsv", "r") as f:
+    with open("cc12m_clean_list_10m.tsv", "r") as f:
          all_lines = f.readlines()
-    with open("cc12m_clean_list.tsv", "w") as f:
+    with open("cc12m_clean_list1.tsv", "w") as f:
          for line in all_lines:
-             #print(line.strip().split('\t')[0])
-             if line.strip().split('\t')[0] not in lines_to_remove:
-                print(" candidate remove" ,line)
-                f.write(line)
+             text = line.strip().split('\t')[1]
+             image = line.strip().split('\t')[0]
+             #print("text .. ",text)
+             #print("http.. ",http)
+             if image in images_set:
+                 #print(" lll ",image)
+                 towrite = image + "\t" + text + "\n"
+
+                 #print(" candidate remove" ,towrite)
+                 f.write(towrite)
+             else:
+                 print(" image :", image)
 
 cleanfile()
+
