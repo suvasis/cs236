@@ -28,3 +28,20 @@ cs236 project code and steps
    change the training and evaluation folder directory in do_run.sh
    
    ./do_run.sh
+   
+ 4. clone the git https://github.com/lzhbrian/metrics to calculate 
+ 
+IS and FID score
+
+
+# calc IS score on custom images in a folder/
+
+python is_fid_pytorch.py --path foldername/
+
+
+# calc IS, FID score on custom images in a folder/, compared to CIFAR10 (given precalculated stats)
+
+python is_fid_pytorch.py --path foldername/ --fid res/stats_pytorch/fid_stats_cifar10_train.npz
+
+
+
