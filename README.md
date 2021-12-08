@@ -19,6 +19,7 @@ cs236 project code and steps
 2. Encoding the image using pretrained VQGAN
 
    cd ../code
+   
    python vegan_encoding.py
    
 2. Running Trainging and evaluation
