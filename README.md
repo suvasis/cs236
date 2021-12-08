@@ -1,13 +1,15 @@
 cs236 project code and steps
 
 1. Data peparation
-2. 
+
+
    a) cd cs236/data
    
-      python data
-   b)
+      python CC12M_downloads.py
+      
+   b) python download_images.py
    
-   c)
+   c) preprocess_map_image_to_text.py
    
 3. Running Trainging and evaluation
 4. 
