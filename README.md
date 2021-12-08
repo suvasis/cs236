@@ -11,8 +11,9 @@ cs236 project code and steps
    
    c) preprocess_map_image_to_text.py
    
-3. Running Trainging and evaluation
-4. 
+2. Running Trainging and evaluation
+
+ 
    change the training and evaluation folder directory in do_run.sh
    
    ./do_run.sh
