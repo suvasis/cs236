@@ -2,6 +2,11 @@ cs236 project code and steps
 
 1. Data peparation
 
+    //From the report data[5] download the following 12 million image caption pairs
+    //Conceptual Captions: A Cleaned, Hypernymed, Image Alt-text Dataset
+      For Automatic Image Captioning
+
+     create a folder cs236/cc12m
 
    a) cd cs236/data
    
